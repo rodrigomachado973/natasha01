@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Uma pergunta importante 💖</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #ffeaf4;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      margin: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+    }
+    #sim {
+      background-color: #ff69b4;
+      color: white;
+    }
+    #nao {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Natasha, você ama seu namorado? 🥺</h1>
+  <button id="sim">Sim</button>
+  <button id="nao">Não</button>
+
+  <p id="resposta" style="font-size: 24px; color: darkred; margin-top: 30px;"></p>
+
+  <script>
+    const sim = document.getElementById('sim');
+    const nao = document.getElementById('nao');
+    const resposta = document.getElementById('resposta');
+
+    sim.onclick = () => {
+      resposta.textContent = 'Ele também te ama ❤️';
+    };
+
+    nao.onmouseover = () => {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 50));
+      nao.style.position = 'absolute';
+      nao.style.left = x + 'px';
+      nao.style.top = y + 'px';
+    };
+  </script>
+</body>
+</html>
